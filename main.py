@@ -254,14 +254,16 @@ def main(page: Page):
                                                 content=Text(
                                                     #для requests
                                                     round(temp),
-                                                    size = 52
+                                                    size = 52,
+                                                    color="white"
                                                 ),
                                             ),
                                             Container(
                                                 content=Text(
                                                     "°",
                                                     size = 28,
-                                                    text_align="center"
+                                                    text_align="center",
+                                                    color="white"
                                                 )
                                             ),
                                         ],
@@ -270,7 +272,8 @@ def main(page: Page):
                                         f'{description}',
                                         size = 16,
                                         color="white25",
-                                        text_align="center"
+                                        text_align="center",
+                                        
                                     ),
                                     
                                 ],
@@ -298,6 +301,7 @@ def main(page: Page):
                                         Text(
                                             f'{str(wind)} m/s',
                                             size = 11,
+                                            color="white"
                                         ),
                                         Text(
                                             "wind",
@@ -324,6 +328,7 @@ def main(page: Page):
                                         Text(
                                             f'{str(humidity)} %',
                                             size = 11,
+                                            color="white"
                                         ),
                                         Text(
                                             "humidity",
@@ -350,6 +355,7 @@ def main(page: Page):
                                         Text(
                                             f'{str(feels_like)} °',
                                             size = 11,
+                                            color="white"
                                         ),
                                         Text(
                                             "feels_like",
@@ -379,7 +385,6 @@ def main(page: Page):
             width=210, 
             height=550, 
             controls=[
-
                 _top(),
             ],
         ),
@@ -389,6 +394,6 @@ def main(page: Page):
 
 
 if __name__ == "__main__":
-    flet.app(target=main, view=WEB_BROWSER, assets_dir='assets')
+    flet.app(target=main, assets_dir='assets')
 
 
